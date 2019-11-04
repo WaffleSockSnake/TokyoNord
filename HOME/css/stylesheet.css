@@ -1,0 +1,145 @@
+/****************
+HEADING
+****************/
+
+header {
+  margin: 100px auto;
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  font-family: 'Noto Sans Mono CJK JP';
+  font-size: 3.0em;
+  margin-bottom: 0;
+}
+
+
+/****************
+LISTS
+****************/
+
+.main h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.main a {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.main ul {
+  margin: .0;
+  padding: .125em 0;
+  text-align: center;
+  list-style: none;
+  border-radius: 5;
+}
+
+.main section {
+  display: inline-block;
+  float: left;
+  margin: 1 15% 20px;
+  width: 70%;
+  border-radius: 5;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/****************
+WEATHER BLOCK
+****************/
+
+div.weather {
+  font-family: sans-serif;
+  font-size: 1.1em;
+  opacity: 70%;
+  margin-top: 0;
+}
+
+/****************
+COLORS
+****************/
+
+body {
+  background-color: #a3be8c;
+  color: #2e3440;
+}
+
+body a, body a:visited {
+  color: #2e3440;
+}
+
+body a:hover {
+  color: #2e3440;
+}
+
+.main ul {
+  background-color: #2e3440;
+}
+
+.reddit h3 {
+  background-color: #81a1c1;
+}
+
+.chan h3 {
+  background-color: #8fbcbb;
+}
+
+.school h3 {
+  background-color: #a3be8c;
+}
+
+.general h3 {
+  background-color: #bf616a;
+}
+
+.weather {
+  color: #d8dee9;
+}
+
+/****************
+SEARCH
+****************/
+
+section.search {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#search-text {
+  background-color: #3b4252;
+  border: none;
+}
+
+input, select, textarea {
+  color: #d8dee9;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #DDD;
+  text-align: center;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #DDD;
+  opacity:  1;
+  text-align: center;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #DDD;
+  opacity:  1;
+  text-align: center;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #DDD;
+  text-align: center;
+}

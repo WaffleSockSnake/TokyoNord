@@ -1,0 +1,46 @@
+h1 {
+  color: #d8dee9;
+  text-shadow: 2px 2px #2e3440;
+}
+
+#summary {
+  color: #d8dee9;
+  text-shadow: 1px 1px #4f5b66;
+}
+
+body {
+  color: #d8dee9;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #2e3440;
+}
+
+.main ul {
+  background-color: #434c5e;
+}
+
+body a, body a:visited {
+  color: #eceff4;
+}
+
+input, select, textarea {
+  color: #eceff4;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #c0c5ce;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #c0c5ce;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #c0c5ce;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #c0c5ce;
+}
