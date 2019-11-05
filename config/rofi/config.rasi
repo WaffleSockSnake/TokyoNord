@@ -1,0 +1,9 @@
+configuration {
+  show-icons:         false;
+  cycle:              true;
+  hide-scrollbar:     true;
+  disable-history:    false;
+  modi:               "drun";
+  display-drun:       "がんばろう";
+  columns: 2;
+}

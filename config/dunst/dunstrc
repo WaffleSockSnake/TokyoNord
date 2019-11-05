@@ -1,0 +1,115 @@
+[global]
+alignment = left
+allow_markup = yes
+bounce_freq = 0
+browser = /usr/bin/firefox -new-tab
+dmenu = /usr/bin/dmenu -p dunst
+follow = mouse
+font = Roboto Mono 12
+format = "%s\n%b"
+geometry = "300x10+15-37"
+horizontal_padding = 8
+icon_folders = 
+icon_position = left
+idle_threshold = 120
+ignore_newline = no
+indicate_hidden = yes
+line_height = 5
+monitor = 0
+padding = 6
+separator_color = auto
+separator_height = 0
+show_age_threshold = -1
+show_indicators = no
+sort = yes
+startup_notification = true
+sticky_history = no
+transparency = 40
+word_wrap = yes
+
+[frame]
+color = "#4c566a"
+width = 2
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+context = ctrl+shift+period
+history = ctrl+grave
+
+[urgency_critical]
+background = "#2e3440"
+foreground = "#d8dee9"
+timeout = 0
+
+[urgency_low]
+background = "#2e3440"
+foreground = "#d8dee9"
+timeout = 11
+
+[urgency_normal]
+background = "#2e3440"
+foreground = "#d8dee9"
+timeout = 11
+
+[AN2Linux]
+appname = AN2Linux
+format = "%s\n%b"
+timeout = 10
+
+[Discord]
+appname = Discord Canary
+format = "Discord\n%s\n%b"
+new_icon = Discord
+
+[Dropbox]
+appname = Dropbox
+format = "Dropbox\n%s\n%b"
+new_icon = Dropbox
+timeout = 0
+
+[ImageMagick]
+appname = ImageMagick
+format = "System Notification\n%s\n%b"
+timeout = 0
+
+[Mozilla Firefox]
+appname = Firefox
+format = "Mozilla Firefox\n%s\n%b"
+new_icon = Mozilla Firefox
+timeout = 10
+
+[NCMPCPP]
+appname = NCMPCPP
+format = "Now Playing\n%s\n%b"
+timeout = 0
+
+[Redshift]
+appname = Redshift
+format = "System Notification\n%s\n%b"
+new_icon = Redshift
+timeout = 0
+
+[Spotify]
+appname = Spotify
+format = "Now Playing\n%s\n%b"
+new_icon = Spotify
+timeout = 10
+
+[Transmission]
+appname = Transmission
+format = "Transmission\n%s\n%b"
+new_icon = Transmission
+timeout = 0
+
+[UpdateChecker]
+appname = UpdateChecker
+format = "System Notification\n%s\n%b"
+new_icon = UpdateChecker
+timeout = 0
+
+[Volume]
+appname = Volume
+format = "System Notification\n%s\n%b"
+new_icon = Volume
+timeout = 10
