@@ -1,0 +1,259 @@
+[colors]
+background = #2e3440
+background-alt = #3b4252
+foreground = #d8dee9
+foreground-alt = #81a1c1
+primary = #81a1c1
+secondary = #e60053
+alert = #bd2c40
+calendar = #a3be8c
+battery = #82B061
+volume = #81a1c1
+cpu = #8fbcbb
+ram = #bf616a
+clock = #b48ead
+logo = #5e81ac
+
+[bar/top]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 84%
+height = 30
+offset-x = 8%
+offset-y = .6%
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0 
+border-color = #4c566a
+
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+module-margin-background = #3b4252
+
+font-0 = SF Mono Powerline:pixelsize=10;2
+font-1 = unifont:fontformat=truetype:size=13:antialias=false;2
+font-2 = Siji:size=12;1
+font-3 = FontAwesome:size=10;-2
+
+
+modules-left = logo sep xwindow end
+modules-center = bspwm
+modules-right = end volume sep wifi sep time sep date
+
+tray-position = none
+tray-padding = 2
+
+[module/powermenu]
+type = custom/menu
+
+label-open-prefix = "   "
+label-open-prefix-background = #3b4252
+label-open-prefix-foreground = #bf616a
+label-open = pwr
+label-open-background = #3b4252
+label-open-foreground = #d8dee9
+label-close = cancel
+;label-close-background = #dd0000
+;label-close-foreground = #fff
+label-open-padding = 4 
+label-close-padding = 3 
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-0-padding = 3
+menu-0-1-padding = 3
+
+menu-1-0 = reboot?  
+menu-1-0-exec = sudo reboot
+menu-1-0-padding = 3
+
+menu-2-0 = power off?  
+menu-2-0-exec = sudo poweroff
+menu-2-0-padding = 3
+
+[module/xwindow]
+type = custom/text
+content = "  [THE SHELL RETURNS TO DUST] "
+content-background = #3b4252
+content-foreground = #d8dee9
+
+
+[module/logo]
+type = custom/text
+content-background = #3b4252
+content = "Linux  "
+content-prefix = "   Void "
+content-prefix-background = #3b4252
+content-prefix-foreground = #88c0d0
+
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+
+format = <label-state> <label-mode>
+label-monitor = %name%
+
+label-dimmed-foreground = #555
+label-dimmed-underline = ${bar/top.background}
+label-dimmed-focused-background = #f00
+
+; Available tokens:   %name%   %icon%   %index%
+label-focused = 
+label-focused-foreground = #d08770
+label-focused-padding = 1
+
+label-occupied = 
+label-occupied-padding = 1
+label-occupied-foreground = #4c566a
+
+
+label-urgent = U
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = #4c566a
+label-empty-padding = 1
+
+
+[module/wifi]
+type = internal/network
+interface = enp37s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected = "Wifi "
+label-connected-foreground = #d8dee9
+label-connected-background = #3b4252
+label-connected-padding = 1
+format-connected-prefix = "  "
+format-connected-prefix-foreground = #bf616a
+format-connected-prefix-background = #3b4252
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+label-discharging-foreground = ${colors.battery}
+label-charging-foreground = ${colors.battery}
+label-charging-padding = 1
+label-discharging-padding = 1
+format-charging = <animation-charging><label-charging>
+
+format-discharging = <ramp-capacity><label-discharging>
+
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.battery}
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
+animation-charging-foreground = ${colors.battery}
+animation-charging-framerate = 750
+
+[module/sep]
+type = custom/text
+content = |
+content-foreground = #d8dee9
+content-background = #3b4252
+
+[module/end]
+type = custom/text
+content = "|"
+content-foreground = #353b49
+content-background = #353b49
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "   "
+format-prefix-foreground = ${colors.cpu}
+label = "%percentage%%  "
+format-prefix-background = #3b4252
+label-background = #3b4252
+
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.ram}
+label = %percentage_used%%
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%d/%m-%Y"
+date-alt = "%a Week %V"
+
+time = %H:%M
+time-alt = %H:%M
+
+format-prefix = "   "
+format-prefix-foreground = ${colors.calendar}
+label-background = #3b4252
+label = "%date%  "
+format-prefix-background = #3b4252
+
+
+[module/time]
+type = internal/date
+interval = 5
+label-background = #3b4252
+time = %I:%M %p
+format-prefix = "   "
+format-prefix-foreground = ${colors.clock}
+label = "%time%  "
+format-prefix-background = #3b4252
+
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+label-volume = "%percentage%%  "
+format-volume-background = #3b4252
+
+format-muted = <label-muted>
+label-muted = "muted"
+label-muted-foreground = #66
+label-muted-background = #3b4252
+
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+ramp-volume-foreground = ${colors.volume}
+
+
+[settings]
+screenchange-reload = true
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
